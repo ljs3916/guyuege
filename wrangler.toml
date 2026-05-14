@@ -1,4 +1,4 @@
-main = "src/index.js"
+name = "guyuegedianzishu"main = "src/index.js"
 compatibility_date = "2026-05-14"
 
 [vars]
