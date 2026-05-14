@@ -1,4 +1,4 @@
-name = "guyuege"
+name = "guyuegedianzishu"
 main = "src/index.js"
 compatibility_date = "2026-05-15"
 
@@ -8,12 +8,12 @@ GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyuege/main/clo
 [[d1_databases]]
 binding = "CONTENT_DB"
 database_name = "content-platform"
-database_id = "你的真实D1_ID"
+database_id = "9e2ed774-3d6d-4f02-83e6-2239d51a94a8"
 
 [[kv_namespaces]]
 binding = "CONTENT_CACHE"
-id = "你的真实KV_ID"
+id = "54011acab9e8467cbf8df10a5d57a39e"
 
 [[r2_buckets]]
 binding = "CONTENT_BUCKET"
-bucket_name = "content-platform"
+bucket_name = "guyueger2"
