@@ -5,7 +5,7 @@
   "description": "Ebook and video membership platform API for Cloudflare Workers.",
   "type": "module",
   "scripts": {
-    "deploy": "npm run db:migrations:apply && wrangler deploy",
+    "deploy": "wrangler deploy && wrangler d1 migrations apply CONTENT_DB --remote",
     "db:migrations:apply": "wrangler d1 migrations apply CONTENT_DB --remote"
   },
   "devDependencies": {
@@ -28,8 +28,23 @@
       "GITHUB_TOKEN": {
         "description": "Optional read-only GitHub token if your content catalog repository is private."
       },
-      "USDT_CALLBACK_SECRET": {
-        "description": "Shared secret sent by your USDT TRC20 listener in the `x-callback-secret` header."
+      "CONTENT_SYNC_SECRET": {
+        "description": "Secret used by your backend payment system to sync paid VIP/content entitlements into this Worker."
+      },
+      "BEPUSDT_MERCHANT_KEY": {
+        "description": "Optional. Only needed if bepusdt-trc20-listener calls this Worker directly instead of your backend payment system."
+      },
+      "ADMIN_API_TOKEN": {
+        "description": "Secret token for backend admin operations such as batch content import and cloud-drive sync."
+      },
+      "CLOUD_DRIVE_PROVIDER": {
+        "description": "Optional provider label for cloud drive binding, for example openlist, alist, google-drive, one-drive, r2, or manual."
+      },
+      "AI_CUSTOMER_SERVICE_ENDPOINT": {
+        "description": "Optional AI customer service upstream endpoint."
+      },
+      "AI_CUSTOMER_SERVICE_TOKEN": {
+        "description": "Optional secret token for the AI customer service upstream endpoint."
       }
     }
   }

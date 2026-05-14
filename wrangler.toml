@@ -1,19 +1,14 @@
-name = "guyuegedianzishu"
 main = "src/index.js"
-compatibility_date = "2026-05-15"
+compatibility_date = "2026-05-14"
 
 [vars]
 GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyuege/main/cloudflare-content-platform/content/catalog.example.json"
 
 [[d1_databases]]
 binding = "CONTENT_DB"
-database_name = "content-platform"
-database_id = "9e2ed774-3d6d-4f02-83e6-2239d51a94a8"
 
 [[kv_namespaces]]
 binding = "CONTENT_CACHE"
-id = "54011acab9e8467cbf8df10a5d57a39e"
 
 [[r2_buckets]]
 binding = "CONTENT_BUCKET"
-bucket_name = "guyueger2"

@@ -40,3 +40,18 @@ CREATE TABLE IF NOT EXISTS affiliate_ledger (
   status TEXT NOT NULL DEFAULT 'pending',
   created_at TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS categories (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  type TEXT NOT NULL DEFAULT 'ebook',
+  parent_id TEXT,
+  sort INTEGER NOT NULL DEFAULT 0,
+  status TEXT NOT NULL DEFAULT 'active',
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_categories_type ON categories(type);
+CREATE INDEX IF NOT EXISTS idx_categories_parent_id ON categories(parent_id);
+CREATE INDEX IF NOT EXISTS idx_categories_sort ON categories(sort);
