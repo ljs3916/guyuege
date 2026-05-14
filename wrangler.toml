@@ -1,16 +1,20 @@
+name = "cloudflare-content-platform"
+
 main = "src/index.js"
 compatibility_date = "2026-05-14"
 
 [vars]
-GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyge/main/content/catalog.example.json
-
-"
+GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyge/main/content/catalog.example.json"
 
 [[d1_databases]]
 binding = "CONTENT_DB"
+database_name = "content-db"
+database_id = "xxxxxxxx-xxxx"
 
 [[kv_namespaces]]
 binding = "CONTENT_CACHE"
+id = "xxxxxxxxxxxx"
 
 [[r2_buckets]]
 binding = "CONTENT_BUCKET"
+bucket_name = "content-bucket"
