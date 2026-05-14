@@ -3,7 +3,8 @@ main = "src/index.js"
 compatibility_date = "2026-05-15"
 
 [vars]
-GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/content-library/main/catalog.json"
+GITHUB_CATALOG_URL = "GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyuege/main/cloudflare-content-platform/content/catalog.example.json"
+"
 
 [[d1_databases]]
 binding = "CONTENT_DB"
@@ -12,7 +13,7 @@ database_id = "replace-with-d1-id"
 
 [[kv_namespaces]]
 binding = "CONTENT_CACHE"
-id = "replace-with-kv-id"
+id = "abcd1234xxxxxxxxxxxxxxxxxxxx"
 
 [[r2_buckets]]
 binding = "CONTENT_BUCKET"
