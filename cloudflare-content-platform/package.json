@@ -1,0 +1,36 @@
+{
+  "name": "cloudflare-content-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ebook and video membership platform API for Cloudflare Workers.",
+  "type": "module",
+  "scripts": {
+    "deploy": "npm run db:migrations:apply && wrangler deploy",
+    "db:migrations:apply": "wrangler d1 migrations apply CONTENT_DB --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "CONTENT_DB": {
+        "description": "D1 database for users, orders, VIP entitlements, and affiliate ledger."
+      },
+      "CONTENT_CACHE": {
+        "description": "KV namespace for cached content catalog and short-lived access tokens."
+      },
+      "CONTENT_BUCKET": {
+        "description": "R2 bucket for protected PDF, video, cover, and preview assets."
+      },
+      "GITHUB_CATALOG_URL": {
+        "description": "Raw GitHub URL for `catalog.json`, for example `https://raw.githubusercontent.com/owner/content-library/main/catalog.json`."
+      },
+      "GITHUB_TOKEN": {
+        "description": "Optional read-only GitHub token if your content catalog repository is private."
+      },
+      "USDT_CALLBACK_SECRET": {
+        "description": "Shared secret sent by your USDT TRC20 listener in the `x-callback-secret` header."
+      }
+    }
+  }
+}
