@@ -2,7 +2,9 @@ main = "src/index.js"
 compatibility_date = "2026-05-14"
 
 [vars]
-GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyge/main/cloudflare-content-platform/content/catalog.example.json"
+GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/ljs3916/guyge/main/content/catalog.example.json
+
+"
 
 [[d1_databases]]
 binding = "CONTENT_DB"
